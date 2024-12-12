@@ -91,6 +91,13 @@
       this.updateVolumeIcon();
       // Append the player to the document
       document.body.appendChild(this.container);
+       // Get stored volume from localStorage
+      const storedVolume = localStorage.getItem('audioPlayerVolume');
+      if (storedVolume) {
+        this.audio.volume = parseFloat(storedVolume); // Parse as float
+        this.volumeSlider.value = storedVolume;
+        this.updateVolumeIcon();
+      }
     },
     setSrc: function(audioSrc) {
       this.audio.src = audioSrc;
@@ -148,6 +155,7 @@
 
     onVolumeChange: function() {
       this.audio.volume = this.volumeSlider.value;
+      localStorage.setItem('audioPlayerVolume', this.volumeSlider.value); // Store volume
       this.updateVolumeIcon();
     },
 
