@@ -1,0 +1,126 @@
+  .audio-player {
+    background: #222;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+    max-width: 700px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap; /* Ensure wrapping on small screens */
+  }
+  
+  .play-pause-btn {
+    background: #e74c3c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .time-and-progress {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 5px;
+  }
+  
+  .time {
+    font-size: 12px;
+    min-width: 35px;
+    text-align: center;
+  }
+  
+  .progress {
+    flex: 1;
+    position: relative;
+  }
+  
+  .progress input[type="range"] {
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+  }
+  
+  .progress input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -4px;
+    border: 2px solid #222;
+  }
+  
+  .progress input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #444;
+  }
+  
+  .volume-control {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .volume-control i {
+    font-size: 14px;
+  }
+  
+  .volume-control input[type="range"] {
+    width: 100px; /* Set a fixed width for the volume slider */
+    background: transparent;
+    -webkit-appearance: none;
+  }
+  
+  .volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -4px;
+    border: 2px solid #222;
+  }
+  
+  .volume-control input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 3px;
+    background: #444;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .controls {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .time-and-progress {
+      width: 100%;
+    }
+    
+    .volume-control {
+      width: 100%;
+      justify-content: center;
+    }
+  }
