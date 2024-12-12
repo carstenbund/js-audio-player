@@ -4,9 +4,9 @@ Editable Controls
   
 Init : 
 
-in head
-load Font awesome
-and js file
+in head  
+load Font awesome  
+and js file  
 
 ```html
 
